@@ -1,6 +1,8 @@
 import tensorflow as tf
 from tensorflow.keras import layers, models
+from keras.saving import register_keras_serializable
 
+@register_keras_serializable()
 class CNN(tf.keras.Model):
     def __init__(self, **kwargs):   # Accept arbitrary kwargs
         super(CNN, self).__init__(**kwargs)  # Pass them to base class

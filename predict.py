@@ -11,7 +11,7 @@ INT_TO_LABEL = {v: k for k, v in LABELS.items()}
 image_path = "hand-drawn.png"
 
 # Load the trained model
-model = tf.keras.models.load_model("CNN_model.keras", custom_objects={'CNN': CNN})
+model = tf.keras.models.load_model("CNN_model.keras")
 
 def preprocess_image(image_path):
     image = Image.open(image_path).convert('L')
