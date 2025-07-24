@@ -9,6 +9,8 @@ _ = model(tf.zeros((1, 64, 64, 1)))  # Dummy input with correct shape
 
 # Convert to TFLite
 converter = tf.lite.TFLiteConverter.from_keras_model(model)
+# Uncomment the next line to enable quantization (this will be post-training quantization)
+# converter.optimizations = [tf.lite.Optimize.DEFAULT]  # Enables quantization
 tflite_model = converter.convert()
 
 # Save .tflite model
