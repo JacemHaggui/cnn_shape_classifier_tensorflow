@@ -7,7 +7,7 @@ from labels import LABELS  # Your label dict
 INT_TO_LABEL = {v: k for k, v in LABELS.items()}
 
 test_folder = "train"
-tflite_model_path = "CNN_model.tflite"
+tflite_model_path = "Models/CNN_model_quantised_post_training.tflite"
 
 # Load TFLite model
 interpreter = tf.lite.Interpreter(model_path=tflite_model_path)

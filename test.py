@@ -12,7 +12,7 @@ INT_TO_LABEL = {v: k for k, v in LABELS.items()}
 test_folder = "train"
 
 # Load the trained model, providing the custom class in custom_objects
-model = tf.keras.models.load_model("CNN_model.keras")
+model = tf.keras.models.load_model("Models/CNN_model.keras")
 
 correct = 0
 total = 0
